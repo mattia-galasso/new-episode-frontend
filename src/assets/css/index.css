@@ -1,12 +1,26 @@
+:root {
+  --background-color: #0f1117;
+  --text-color: #ffffff;
+  --active-color: #00d2ff;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* BODY */
+body {
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
 /* MAIN */
 main {
-  padding-top: 100px;
+  padding-top: 80px;
 }
 
 /* CONTAINER */

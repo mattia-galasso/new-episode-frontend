@@ -1,7 +1,16 @@
+import Hero from "../components/Hero";
+
+// HOMEPAGE CSS
+import '../assets/css/homepage.css'
+
 export default function Homepage() {
   return (
     <>
-      <h1>HOMEPAGE</h1>
+      <Hero />
+
+      <section className="container-custom">
+
+      </section>
     </>
   );
 }

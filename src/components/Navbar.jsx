@@ -1,5 +1,8 @@
 import { Link, NavLink } from "react-router";
 
+// NAVBAR CSS
+import '../assets/css/navbar.css'
+
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
@@ -58,6 +61,8 @@ export default function Navbar() {
                 <i className="bi bi-search navbar-search-icon"></i>
 
                 <input
+                  id="search-navbar"
+                  name="search-navbar"
                   type="search"
                   className="form-control navbar-search"
                   placeholder="Cerca serie TV, attori, generi..."

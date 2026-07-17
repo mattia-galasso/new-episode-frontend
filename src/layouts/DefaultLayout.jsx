@@ -12,9 +12,7 @@ export default function DefaultLayout() {
 
     {/* MAIN CONTENT */}
     <main>
-      <div className="container-custom">
         <Outlet />
-      </div>
     </main>
     </>
   );
