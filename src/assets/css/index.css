@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* MAIN */
+main {
+  padding-top: 100px;
+}
+
+/* CONTAINER */
+.container-custom {
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+/* MEDIA QUERY */
+
+/** MOBILE */
+@media (min-width: 576px) {
+  .container-custom {
+    max-width: 80%;
+  }
+}
+
+/** TABLET */
+@media (min-width: 992px) {
+  .container-custom {
+    max-width: 75%;
+  }
+}
+
+/** DESKTOP */
+@media (min-width: 1200px) {
+  .container-custom {
+    max-width: 80%;
+  }
+}

@@ -10,6 +10,9 @@ import "bootstrap-icons/font/bootstrap-icons.min.css";
 // GENERAL CSS
 import './assets/css/index.css'
 
+// NAVBAR CSS
+import './assets/css/navbar.css'
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />

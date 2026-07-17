@@ -1,4 +1,5 @@
 import { Outlet } from "react-router";
+import Navbar from "../components/Navbar";
 
 export default function DefaultLayout() {
 
@@ -6,12 +7,14 @@ export default function DefaultLayout() {
     <>
     {/* HEADER */}
     <header className="fixed-top">
-
+      <Navbar />
     </header>
 
     {/* MAIN CONTENT */}
     <main>
-      <Outlet />
+      <div className="container-custom">
+        <Outlet />
+      </div>
     </main>
     </>
   );
