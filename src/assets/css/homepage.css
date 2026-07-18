@@ -1,4 +1,14 @@
-/* HERO */
+/* 
+  ! HOMEPAGE
+*/
+
+.homepage-section {
+  padding: 3rem 0;
+}
+
+/* 
+  ! HERO 
+*/
 .hero {
   position: relative;
   width: 100%;
@@ -49,11 +59,11 @@
   margin: 1rem 0 1.5rem;
 }
 
-.hero-info p{
-    font-size:1.1rem;
-    line-height:1.8;
-    color:#d0d4db;
-    margin-bottom:2rem;
+.hero-info p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #d0d4db;
+  margin-bottom: 2rem;
 }
 
 .hero-year {
@@ -67,9 +77,98 @@
   margin-bottom: 2rem;
 }
 
-.hero-genres span{
-    padding:8px 18px;
-    border-radius:50px;
-    background:rgba(255,255,255,.08);
-    backdrop-filter:blur(8px);
+.hero-genres span {
+  padding: 8px 18px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+/* 
+  ! TV Series Row
+*/
+
+.tv-series-row {
+  margin-bottom: 3rem;
+}
+
+.tv-series-row:last-child {
+  margin-bottom: 0;
+}
+
+.tv-series-row-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tv-series-row-header h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.homepage-divisor {
+  height: .1rem;
+  background-color: var(--border-color);
+  margin: .1rem 0 1.2rem 0;
+}
+
+/* 
+  ! TV Series Card
+*/
+
+.tv-series-home-card {
+  display: block;
+  color: inherit;
+}
+
+.tv-series-home-card-image {
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 5px;
+  border: .1rem solid var(--border-color);
+  position: relative;
+}
+
+.tv-series-home-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.3s;
+}
+
+.tv-series-home-card-image{
+    position: relative;
+}
+
+.tv-series-home-card-content{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: .45rem;
+    background: linear-gradient(
+        to top,
+        rgba(15,17,23,.95) 0%,
+        rgba(15,17,23,.75) 55%,
+        transparent 100%
+    );
+}
+
+.tv-series-home-card-content h3{
+    margin: 0;
+    font-size: .9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tv-series-home-card-content span{
+    display: block;
+    margin-top: .2rem;
+    font-size: .75rem;
+    color: var(--text-secondary);
 }

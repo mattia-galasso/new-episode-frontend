@@ -1,0 +1,62 @@
+/* 
+  ! TV Series Card
+*/
+
+.tv-series-card {
+  display: block;
+  color: inherit;
+}
+
+.tv-series-card-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.tv-series-card img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+
+  transition: 0.3s;
+}
+
+.tv-series-card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.tv-series-card:hover img {
+  transform: scale(1.05);
+}
+
+.tv-series-card:hover .tv-series-card-overlay {
+  opacity: 1;
+}
+
+.tv-series-card-body {
+  padding-top: 12px;
+}
+
+.tv-series-card-body h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  color: #fff;
+}
+
+.tv-series-card-body p {
+  margin: 0;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.tv-series-card-overlay span {
+  color: #fff;
+  font-weight: 600;
+}
