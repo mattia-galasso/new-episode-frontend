@@ -1,4 +1,30 @@
 /* 
+  ! TV Series Page
+*/
+
+.tv-series-page{
+    padding: 4rem 0;
+}
+
+
+/* FILTRI */
+.tv-series-toolbar .btn {
+    padding: .45rem .85rem;
+    font-size: .9rem;
+    border-radius: 50rem;
+}
+
+/* ORDINAMENTO */
+.filter-dropdown {
+    min-width: 320px;
+}
+
+.filter-dropdown .btn {
+    border-radius: 50rem;
+    font-size: .85rem;
+}
+
+/* 
   ! TV Series Card
 */
 

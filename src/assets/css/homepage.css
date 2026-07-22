@@ -12,8 +12,8 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 85vh;
-  min-height: 700px;
+  height: 53vh;
+  min-height: 430px;
   overflow: hidden;
 }
 
@@ -53,7 +53,7 @@
 }
 
 .hero-info h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 700;
   line-height: 1;
   margin: 1rem 0 1.5rem;
@@ -73,12 +73,14 @@
 
 .hero-genres {
   display: flex;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: 0.6rem;
   margin-bottom: 2rem;
 }
 
 .hero-genres span {
-  padding: 8px 18px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
   border-radius: 50px;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(8px);
@@ -109,9 +111,9 @@
 }
 
 .homepage-divisor {
-  height: .1rem;
+  height: 0.1rem;
   background-color: var(--border-color);
-  margin: .1rem 0 1.2rem 0;
+  margin: 0.1rem 0 1.2rem 0;
 }
 
 /* 
@@ -127,7 +129,7 @@
   aspect-ratio: 1/1;
   overflow: hidden;
   border-radius: 5px;
-  border: .1rem solid var(--border-color);
+  border: 0.1rem solid var(--border-color);
   position: relative;
 }
 
@@ -139,36 +141,93 @@
   transition: 0.3s;
 }
 
-.tv-series-home-card-image{
-    position: relative;
+.tv-series-home-card-image {
+  position: relative;
 }
 
-.tv-series-home-card-content{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: .45rem;
-    background: linear-gradient(
-        to top,
-        rgba(15,17,23,.95) 0%,
-        rgba(15,17,23,.75) 55%,
-        transparent 100%
-    );
+.tv-series-home-card-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 75px;
+  height: auto;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background: linear-gradient(
+    to top,
+    rgba(15, 17, 23, 0.95) 0%,
+    rgba(15, 17, 23, 0.75) 55%,
+    transparent 100%
+  );
+
+  opacity: 0.9;
+  transition:
+    height 0.25s ease,
+    opacity 0.25s ease,
+    background 0.25s ease;
 }
 
-.tv-series-home-card-content h3{
-    margin: 0;
-    font-size: .9rem;
-    font-weight: 600;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.tv-series-home-card:hover .tv-series-home-card-content {
+  min-height: 90px;
+  opacity: 1;
 }
 
-.tv-series-home-card-content span{
-    display: block;
-    margin-top: .2rem;
-    font-size: .75rem;
-    color: var(--text-secondary);
+.tv-series-home-card:hover .tv-series-home-card-image img {
+  transform: scale(1.05);
+}
+
+.tv-series-home-card-content h3 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.tv-series-home-card-content span {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* 
+  ! MEDIA QUERY
+*/
+
+/* 
+  ? TABLET 
+*/
+
+@media (max-width: 768px) {
+  .hero {
+    height: 100%;
+  }
+
+  .hero-content {
+    width: 90%;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .hero-info h1 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+}
+
+/* 
+  ? MOBILE 
+*/
+
+@media (max-width: 576px) {
+  .hero-info p {
+    display: none;
+  }
 }

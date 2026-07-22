@@ -5,6 +5,7 @@ import DefaultLayout from "./layouts/DefaultLayout"
 
 /* PAGES */
 import Homepage from "./pages/HomePage"
+import TvSeriesPage from "./pages/TvSeriesPage"
 import Page404 from "./pages/Page404"
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
         <Routes>
           <Route Component={DefaultLayout}>
             <Route path="/" element={<Homepage />} />
+            <Route path="/serie-tv" element={<TvSeriesPage />} />
             <Route path="*" element={<Page404 />} />
           </Route>
         </Routes>

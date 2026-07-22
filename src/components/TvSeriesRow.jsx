@@ -1,14 +1,26 @@
+import { useEffect, useState } from "react";
 import TvSeriesHomeCard from "./TvSeriesHomeCard";
+import axios from "axios";
 
-export default function TvSeriesRow({ title }) {
-  const fakeSeries = Array.from({ length: 6 }, (_, index) => ({
-    id: index,
-    title: `Serie TV ${index + 1}`,
-    slug: `serie-tv-${index + 1}`,
-    poster: null,
-    start_year: 2026,
-    status: "In produzione",
-  }));
+export default function TvSeriesRow({ title, param }) {
+  const [tvSeries, setTvSeries] = useState();
+
+  function homepageSection() {
+    let baseUrl = `${import.meta.env.VITE_API_URL}/api/tvseries/homepage`;
+
+    axios
+      .get(baseUrl + `?section=${param}`)
+      .then((res) => {
+        setTvSeries(res.data.results);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      })
+  }
+
+  useEffect(homepageSection,[])
+
+  if (!tvSeries) return
 
   return (
     <>
@@ -22,7 +34,7 @@ export default function TvSeriesRow({ title }) {
         <div className="homepage-divisor"></div>
 
         <div className="row g-4">
-          {fakeSeries.map((tvSeries) => (
+          {tvSeries.map((tvSeries) => (
             <div key={tvSeries.id} className="col-6 col-md-4 col-lg-3 col-xl-2">
               <TvSeriesHomeCard tvSeries={tvSeries} />
             </div>
